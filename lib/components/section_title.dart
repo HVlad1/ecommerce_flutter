@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ecommerce_flutter/spacing.dart';
 
 class SectionTitle extends StatelessWidget {
   final String title;
@@ -9,12 +10,12 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: Spacings.paddingSectionTitle,
       child: Align(
         alignment: Alignment.topLeft,
         child: Text(
           title,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.headline3,
         ),
       ),
     );

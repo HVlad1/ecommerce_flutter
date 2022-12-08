@@ -1,3 +1,4 @@
+import 'package:ecommerce_flutter/spacing.dart';
 import 'package:flutter/material.dart';
 
 import '../models/models.dart';
@@ -13,18 +14,15 @@ class ProductCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 165,
+      height: Spacings.heightProductCarousel.toDouble(),
       child: ListView.builder(
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20.0,
-          vertical: 10.0,
-        ),
+        padding: Spacings.paddingProductCarousel,
         itemCount: products.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.only(right: 5.0),
+            padding: Spacings.paddingBetweenCarouselCards,
             child: ProductCard(product: products[index],),
           );
         },

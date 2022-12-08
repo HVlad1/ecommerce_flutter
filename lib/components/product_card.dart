@@ -1,21 +1,22 @@
+import 'package:ecommerce_flutter/colors.dart';
+import 'package:ecommerce_flutter/spacing.dart';
+import 'package:ecommerce_flutter/themes.dart';
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
-  const ProductCard({
-    Key? key,
-    required this.product
-  }) : super(key: key);
+  const ProductCard({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Stack(
       children: [
         SizedBox(
-          width: MediaQuery.of(context).size.width / 2.5,
-          height: 150,
+          width: MediaQuery.of(context).size.width * 0.5,
+          height: Spacings.heightProductCard.toDouble(),
           child: Image.network(
             product.imageUrl,
             fit: BoxFit.cover,
@@ -25,13 +26,13 @@ class ProductCard extends StatelessWidget {
           top: 65,
           left: 5,
           child: Container(
-            width: MediaQuery.of(context).size.width / 2.5 - 10,
-            height: 70,
+            width: screenWidth * 0.5 - 10,
+            height: Spacings.heightBlackLineThroughProductCard.toDouble(),
             decoration: const BoxDecoration(
-              color: Colors.black,
+              color: CustomColors.primary,
             ),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: Spacings.paddingBlackLineContent,
               child: Row(
                 children: [
                   Expanded(
@@ -42,17 +43,12 @@ class ProductCard extends StatelessWidget {
                       children: [
                         Text(
                           product.name,
-                          style: const TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
+                          style: AppThemeData().appThemeData.textTheme.bodyText1,
                         ),
                         Text(
                           '\$${product.price}',
-                          style: const TextStyle(
-                            fontSize: 13,
-                            color: Colors.grey,
-                          ),
+                          style:
+                              AppThemeData().appThemeData.textTheme.bodyText2,
                         )
                       ],
                     ),
@@ -62,7 +58,7 @@ class ProductCard extends StatelessWidget {
                         onPressed: () {},
                         icon: const Icon(
                           Icons.add_circle,
-                          color: Colors.white,
+                          color: CustomColors.onPrimary,
                         )),
                   )
                 ],

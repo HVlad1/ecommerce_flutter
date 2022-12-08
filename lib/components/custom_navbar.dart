@@ -1,4 +1,4 @@
-import 'package:ecommerce_flutter/screens/login_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,7 +10,7 @@ class CustomNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Colors.black,
+      color: Colors.red,
       elevation: 4,
       child: SizedBox(
         height: 70,

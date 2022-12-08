@@ -37,6 +37,9 @@ dependencies:
   go_router: ^5.2.1
   carousel_slider: ^4.1.1
   equatable: ^2.0.5
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +61,7 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  generate: true
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:

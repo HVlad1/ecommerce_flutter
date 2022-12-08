@@ -1,0 +1,34 @@
+{
+    "language": "English",
+    "@language":{
+      "description": "The current Language"
+    },
+    "recommended" : "RECOMMENDED",
+    "@recommended": {
+        "description": "Recommended products"
+    },
+    "mostPopular" : "MOST POPULAR",
+    "@mostPopular": {
+        "description": "Most popular products"
+    },
+    "home" : "Home",
+    "@home": {
+        "description": "Home page"
+    },
+    "products" : "Products",
+    "@category": {
+        "description": "Products"
+    },
+    "cart" : "Cart",
+    "@cart": {
+        "description": "Shopping cart"
+    },
+    "favorites" : "Favorites",
+    "@favorites": {
+        "description": "Favorites products"
+    },
+    "profile" : "Profile",
+    "@profile": {
+        "description": "Profile"
+    }
+}

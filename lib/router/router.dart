@@ -5,7 +5,7 @@ final router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      builder: (context, state) => const HomeScreen(),
+      builder: (context, state) => const MainScreen(),
     ),
     GoRoute(
       path: '/login',
