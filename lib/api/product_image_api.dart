@@ -11,7 +11,6 @@ class ProductImageDataService {
       if (response.statusCode == 200) {
         final List<ModelProductImg> images =
             modelProductImgFromJson(response.body);
-        print('List' + response.body);
         return images;
       } else {
         return <ModelProductImg>[];

@@ -10,8 +10,8 @@ abstract class Spacings {
 
   //Product card
   static const heightProductCard = 150;
-  static const heightBlackLineThroughProductCard = 70;
-  static const paddingBlackLineContent = EdgeInsets.all(8.0);
+  static const heightBlackLineThroughProductCard = 65;
+  static const paddingBlackLineContent = EdgeInsets.all(2.0);
 
   //Product Carousel
   static const heightProductCarousel = 165;

@@ -1,22 +1,19 @@
+import 'package:ecommerce_flutter/models/product_image_model.dart';
 import 'package:flutter/material.dart';
 
-import '../models/category_model.dart';
-
 class CarouselCard extends StatelessWidget {
-  final Category category;
-  const CarouselCard({super.key, 
-    required this.category,
-  });
+  final ModelProductImg product;
+  const CarouselCard({super.key, required this.product});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 20),
       child: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(5.0)),
+          borderRadius: const BorderRadius.all(Radius.circular(15.0)),
           child: Stack(
             children: <Widget>[
-              Image.network(category.imageUrl,
+              Image.network(product.downloadUrl,
                   fit: BoxFit.cover, width: 1000.0),
               Positioned(
                 bottom: 0.0,
@@ -36,7 +33,7 @@ class CarouselCard extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                       vertical: 10.0, horizontal: 20.0),
                   child: Text(
-                    category.name,
+                    product.author,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20.0,

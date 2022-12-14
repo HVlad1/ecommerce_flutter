@@ -59,21 +59,21 @@ class AppThemeData {
           headline4: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w700,
-            color: textColorWhite,
+            color: textColorBlack,
             letterSpacing: letterSpacing,
             height: 1,
           ),
           headline5: const TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w700,
-            color: textColorWhite,
+            color: textColorBlack,
             letterSpacing: letterSpacing,
             height: 1,
           ),
           headline6: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w700,
-            color: textColorWhite.withOpacity(0.8),
+            color: textColorBlack.withOpacity(0.8),
             letterSpacing: letterSpacing,
             height: 1,
           ),
@@ -85,7 +85,7 @@ class AppThemeData {
           ),
           bodyText2: TextStyle(
             fontSize: 14,
-            color: textColorWhite.withOpacity(0.8),
+            color: textColorBlack.withOpacity(0.8),
             fontWeight: FontWeight.w400,
             letterSpacing: letterSpacing,
             height: 1,
