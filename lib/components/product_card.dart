@@ -3,6 +3,7 @@ import 'package:ecommerce_flutter/models/product_image_model.dart';
 import 'package:ecommerce_flutter/spacing.dart';
 import 'package:ecommerce_flutter/themes.dart';
 import 'package:flutter/material.dart';
+import 'package:ecommerce_flutter/radius.dart';
 
 class ProductCard extends StatelessWidget {
   final ModelProductImg product;
@@ -12,12 +13,12 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     return ClipRRect(
-      borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+      borderRadius: Radius.radiusProductCard,
       child: Stack(
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.5,
-            height: Spacings.heightProductCard.toDouble(),
+            height: Spacings.heightProductCard,
             child: Image.network(
               product.downloadUrl,
               fit: BoxFit.cover,
@@ -28,7 +29,7 @@ class ProductCard extends StatelessWidget {
             left: 0,
             child: Container(
               width: screenWidth * 0.5 - 15,
-              height: Spacings.heightBlackLineThroughProductCard.toDouble(),
+              height: Spacings.heightBlackLineThroughProductCard,
               decoration: const BoxDecoration(
                 color: CustomColors.primary,
               ),

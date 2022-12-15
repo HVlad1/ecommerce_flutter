@@ -1,48 +1,57 @@
+import 'dart:convert';
+
+List<ModelProductDetails> modelProductImgFromJson(String str) =>
+    List<ModelProductDetails>.from(
+        json.decode(str).map((x) => ModelProductDetails.fromJson(x)));
+
+String modelProductImgToJson(List<ModelProductDetails> data) =>
+    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
 class ModelProductDetails {
-  int? id;
-  String? uid;
-  String? color;
-  String? department;
-  String? material;
-  String? productName;
-  double? price;
-  String? priceString;
-  String? promoCode;
+  ModelProductDetails({
+    required this.id,
+    required this.uid,
+    required this.color,
+    required this.department,
+    required this.material,
+    required this.productName,
+    required this.price,
+    required this.priceString,
+    required this.promoCode,
+  });
 
-  ModelProductDetails(
-      {this.id,
-      this.uid,
-      this.color,
-      this.department,
-      this.material,
-      this.productName,
-      this.price,
-      this.priceString,
-      this.promoCode});
+  int id;
+  String uid;
+  String color;
+  String department;
+  String material;
+  String productName;
+  double price;
+  String priceString;
+  String promoCode;
 
-  ModelProductDetails.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    uid = json['uid'];
-    color = json['color'];
-    department = json['department'];
-    material = json['material'];
-    productName = json['product_name'];
-    price = json['price'];
-    priceString = json['price_string'];
-    promoCode = json['promo_code'];
-  }
+  factory ModelProductDetails.fromJson(Map<String, dynamic> json) =>
+      ModelProductDetails(
+        id: json["id"],
+        uid: json["uid"],
+        color: json["color"],
+        department: json["department"],
+        material: json["material"],
+        productName: json["product_name"],
+        price: json["price"],
+        priceString: json["price_string"],
+        promoCode: json["promo_code"],
+      );
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['uid'] = uid;
-    data['color'] = color;
-    data['department'] = department;
-    data['material'] = material;
-    data['product_name'] = productName;
-    data['price'] = price;
-    data['price_string'] = priceString;
-    data['promo_code'] = promoCode;
-    return data;
-  }
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "uid": uid,
+        "color": color,
+        "department": department,
+        "material": material,
+        "product_name": productName,
+        "price": price,
+        "price_string": priceString,
+        "promo_code": promoCode
+      };
 }

@@ -25,7 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
           if (imgModel.hasData) {
             return Column(
               children: [
-                imageCarousel(imgModel.data!),
+                // imageCarousel(imgModel.data!),
+                ImageCarousel(imgList: imgModel.data!),
                 // ignore: prefer_const_constructors
                 SizedBox(
                   height: 10,
@@ -33,14 +34,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 SectionTitle(
                   title: AppLocalizations.of(context)!.recommended,
                 ),
-                recommendedProducts(imgModel.data!),
+                // recommendedProducts(imgModel.data!),
+                RecommendedProducts(imgList: imgModel.data!),
                 const SizedBox(
                   height: 10,
                 ),
                 SectionTitle(
                   title: AppLocalizations.of(context)!.mostPopular,
                 ),
-                mostPopularProducts(imgModel.data!),
+                // mostPopularProducts(imgModel.data!),
+                MostPopularProducts(imgList: imgModel.data!),
               ],
             );
           }

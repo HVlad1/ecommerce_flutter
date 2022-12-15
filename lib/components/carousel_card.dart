@@ -1,5 +1,6 @@
 import 'package:ecommerce_flutter/models/product_image_model.dart';
 import 'package:flutter/material.dart';
+import 'package:ecommerce_flutter/radius.dart';
 
 class CarouselCard extends StatelessWidget {
   final ModelProductImg product;
@@ -10,7 +11,7 @@ class CarouselCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 20),
       child: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(15.0)),
+          borderRadius: Radius.radiusProductCard,
           child: Stack(
             children: <Widget>[
               Image.network(product.downloadUrl,
