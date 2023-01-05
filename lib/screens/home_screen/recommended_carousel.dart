@@ -1,17 +1,20 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:ecommerce_flutter/models/product_image_model.dart';
 import 'package:ecommerce_flutter/components/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/radius.dart';
 
-class RecommendedProducts extends StatelessWidget {
-  final List<ModelProductImg> imgList;
-  const RecommendedProducts({super.key, required this.imgList});
+import '../../cubit/products_cubit.dart';
+
+class RecommendedCarousel extends StatelessWidget {
+  final ProductsState productState;
+  const RecommendedCarousel({Key? key, required this.productState})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-      items: imgList
+      items: (productState as ProductsLoaded)
+          .products
           .map((model) {
             return Container(
                 margin: const EdgeInsets.all(5),
