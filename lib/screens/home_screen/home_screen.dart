@@ -19,11 +19,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         BlocBuilder<ProductsCubit, ProductsState>(
           builder: (_, state) {
             if (state is ProductsLoading) {
-              return const Center(child: CircularProgressIndicator());
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
             } else if (state is ProductsError) {
               return Center(child: Text(AppLocalizations.of(context)!.error));
             } else {

@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 
 class ProductDetailsDataService {
   static const String url =
-      'https://random-data-api.com/api/commerce/random_commerce?size=20';
+      'https://random-data-api.com/api/commerce/random_commerce?size=100';
 
   static Future<List<ModelProductDetails>> getDetails() async {
     try {

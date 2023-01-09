@@ -1,12 +1,12 @@
 import 'package:ecommerce_flutter/colors.dart';
-import 'package:ecommerce_flutter/models/product_image_model.dart';
+import 'package:ecommerce_flutter/models/product_model.dart';
 import 'package:ecommerce_flutter/spacing.dart';
 import 'package:ecommerce_flutter/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/radius.dart';
 
 class ProductCard extends StatelessWidget {
-  final ModelProductImg product;
+  final ProductModel product;
   const ProductCard({super.key, required this.product});
 
   @override
@@ -30,8 +30,8 @@ class ProductCard extends StatelessWidget {
             child: Container(
               width: screenWidth * 0.5 - 15,
               height: Spacings.heightBlackLineThroughProductCard,
-              decoration: const BoxDecoration(
-                color: CustomColors.primary,
+              decoration: BoxDecoration(
+                color: CustomColors.primary.withOpacity(0.4),
               ),
               child: Padding(
                 padding: Spacings.paddingBlackLineContent,
@@ -44,12 +44,14 @@ class ProductCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            product.author,
+                            product.modelProductDetails.productName.length > 12
+                                ? '${product.modelProductDetails.productName.substring(0, 12)}...'
+                                : product.modelProductDetails.productName,
                             style:
                                 AppThemeData().appThemeData.textTheme.bodyText1,
                           ),
                           Text(
-                            product.id,
+                            '${product.modelProductDetails.priceString}\$',
                             style:
                                 AppThemeData().appThemeData.textTheme.bodyText1,
                           ),

@@ -1,9 +1,9 @@
-import 'package:ecommerce_flutter/models/product_image_model.dart';
+import 'package:ecommerce_flutter/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/radius.dart';
 
 class CarouselCard extends StatelessWidget {
-  final ModelProductImg product;
+  final ProductModel product;
   const CarouselCard({super.key, required this.product});
 
   @override
@@ -34,7 +34,7 @@ class CarouselCard extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(
                       vertical: 10.0, horizontal: 20.0),
                   child: Text(
-                    product.author,
+                    product.modelProductDetails.productName,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20.0,

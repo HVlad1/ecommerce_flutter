@@ -78,7 +78,7 @@ class AppThemeData {
             height: 1,
           ),
           bodyText1: const TextStyle(
-            fontSize: 20,
+            fontSize: 16,
             color: textColorWhite,
             fontWeight: FontWeight.w400,
             height: 1,

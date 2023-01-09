@@ -1,4 +1,5 @@
 
+import 'package:ecommerce_flutter/api/product_details_api.dart';
 import 'package:ecommerce_flutter/api/product_image_api.dart';
 import 'package:ecommerce_flutter/cubit/products_cubit.dart';
 import 'package:ecommerce_flutter/l10n/l10n.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => ProductsCubit(ProductImageDataService())..getProducts(),
+      create: (context) => ProductsCubit(ProductImageDataService(), ProductDetailsDataService())..getProducts(),
       child: MaterialApp.router(
         supportedLocales: L10n.all,
         localizationsDelegates: const [
