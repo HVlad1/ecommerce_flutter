@@ -29,7 +29,7 @@ class MostPopularCarousel extends StatelessWidget {
         aspectRatio: 2.5,
         enlargeCenterPage: true,
         viewportFraction: 0.4,
-        enlargeStrategy: CenterPageEnlargeStrategy.height,
+        enlargeStrategy: CenterPageEnlargeStrategy.zoom,
         enableInfiniteScroll: false,
         initialPage: 1,
         autoPlay: false,

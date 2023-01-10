@@ -44,8 +44,8 @@ class ProductCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            product.modelProductDetails.productName.length > 12
-                                ? '${product.modelProductDetails.productName.substring(0, 12)}...'
+                            product.modelProductDetails.productName.length > 15
+                                ? '${product.modelProductDetails.productName.substring(0, 15)}...'
                                 : product.modelProductDetails.productName,
                             style:
                                 AppThemeData().appThemeData.textTheme.bodyText1,
@@ -60,6 +60,7 @@ class ProductCard extends StatelessWidget {
                     ),
                     Expanded(
                       child: IconButton(
+                        splashColor: Colors.transparent,
                           onPressed: () {},
                           icon: const Icon(
                             Icons.add_circle,

@@ -30,28 +30,32 @@ class _HomeScreenState extends State<HomeScreen> {
             } else if (state is ProductsError) {
               return Center(child: Text(AppLocalizations.of(context)!.error));
             } else {
-              return Column(
-                children: [
-                  SliderCarousel(
-                    productState: state,
+              return Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SliderCarousel(
+                        productState: state,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      SectionTitle(
+                          title: AppLocalizations.of(context)!.recommended),
+                      RecommendedCarousel(
+                        productState: state,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      SectionTitle(
+                          title: AppLocalizations.of(context)!.mostPopular),
+                      MostPopularCarousel(
+                        productsState: state,
+                      )
+                    ],
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  SectionTitle(
-                      title: AppLocalizations.of(context)!.recommended),
-                  RecommendedCarousel(
-                    productState: state,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  SectionTitle(
-                      title: AppLocalizations.of(context)!.mostPopular),
-                  MostPopularCarousel(
-                    productsState: state,
-                  )
-                ],
+                ),
               );
             }
           },
