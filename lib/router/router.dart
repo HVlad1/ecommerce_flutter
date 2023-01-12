@@ -1,10 +1,11 @@
 import 'package:ecommerce_flutter/screens/screens.dart';
+import 'package:ecommerce_flutter/screens/splash_screen/splash_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
   routes: [
     GoRoute(
-      path: '/',
+      path: '/main',
       builder: (context, state) => const MainScreen(),
     ),
     GoRoute(
@@ -31,5 +32,9 @@ final router = GoRouter(
       path: '/profile',
       builder: (context, state) => const ProfileScreen(),
     ),
+    GoRoute(
+      path: '/',
+      builder: (context, state) => const SplashScreen(),
+    )
   ],
 );
