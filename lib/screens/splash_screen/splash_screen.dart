@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../colors.dart';
+import '../../spacing.dart';
+import '../../themes.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({
@@ -44,12 +46,16 @@ class _SplashScreenState extends State<SplashScreen>
       backgroundColor: Colors.white,
       body: FadeTransition(
         opacity: _animation,
-        child: const Center(
-            child: Icon(
-          Icons.shopping_cart,
+        child: Center(
+          child: Container(
           color: CustomColors.primary,
-          size: 70,
-        )),
+          padding: Spacings.paddingCustomAppBar,
+          child: Text(
+            AppLocalizations.of(context)!.appname,
+            style: AppThemeData().appThemeData.appBarTheme.titleTextStyle,
+          ),
+      ),
+        ),
       ),
     );
   }
