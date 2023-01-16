@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/radius.dart';
 
 import '../../cubit/products_cubit.dart';
+import '../product_screen.dart/product_details.dart';
 
 class MostPopularCarousel extends StatelessWidget {
   final ProductsState productsState;
@@ -21,7 +22,13 @@ class MostPopularCarousel extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: Radius.radiusContaierProducts,
                 ),
-                child: ProductCard(product: model));
+                child: GestureDetector(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                ProductDetails(product: model))),
+                    child: ProductCard(product: model)));
           })
           .toList()
           .sublist(14, 19),

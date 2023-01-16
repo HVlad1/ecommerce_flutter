@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecommerce_flutter/components/product_card.dart';
+import 'package:ecommerce_flutter/screens/product_screen.dart/product_details.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/radius.dart';
 
@@ -21,7 +22,12 @@ class RecommendedCarousel extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: Radius.radiusContaierProducts,
                 ),
-                child: ProductCard(product: model));
+                child: GestureDetector(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>  ProductDetails(product: model))),
+                    child: ProductCard(product: model)));
           })
           .toList()
           .sublist(10, 13),

@@ -51,15 +51,15 @@ class AppThemeData {
           ),
           headline3: const TextStyle(
             fontSize: 20,
-            fontWeight: FontWeight.w700,
+            fontWeight: FontWeight.w600,
             color: textColorBlack,
             letterSpacing: letterSpacing,
             height: 1,
           ),
           headline4: const TextStyle(
-            fontSize: 16,
+            fontSize: 20,
             fontWeight: FontWeight.w700,
-            color: textColorBlack,
+            color: textColorWhite,
             letterSpacing: letterSpacing,
             height: 1,
           ),
