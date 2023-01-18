@@ -24,10 +24,6 @@ class ProductDetails extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            shape: const ContinuousRectangleBorder(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30),
-                    bottomRight: Radius.circular(30))),
             leading: Padding(
               padding: Spacings.paddingSliverAppBar,
               child: Container(

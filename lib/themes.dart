@@ -7,6 +7,7 @@ class AppThemeData {
   ThemeData get appThemeData {
     const textColorWhite = CustomColors.textColorOnCard;
     const textColorBlack = CustomColors.textColorOnWhite;
+    const textColorRed = CustomColors.error;
 
     const letterSpacing = 0.0;
     return ThemeData(
@@ -45,7 +46,7 @@ class AppThemeData {
           headline2: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w700,
-            color: textColorBlack,
+            color: textColorRed,
             letterSpacing: letterSpacing,
             height: 1,
           ),

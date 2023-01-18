@@ -24,4 +24,8 @@ abstract class Spacings {
   static const paddingSliverToBoxAdapter = EdgeInsets.only(top: 18.0, right: 16.0, left: 16.0);
   static const heightContainerDetails = 310.0;
   static const borderRadiusContainerDetails = BorderRadius.all(Radius.circular(29.0));
+  static const paddingDetailsPrice = EdgeInsets.all(28.0);
+  static const paddingDetailsPromoCode = EdgeInsets.all(10.0);
+  static const heightSizedBoxProductDetais = 10.0;
+  static const heightSizedBoxProductDetailsTitle = 15.0;
 }

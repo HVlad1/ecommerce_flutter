@@ -5,6 +5,7 @@ import 'package:ecommerce_flutter/screens/screens.dart';
 import 'package:ecommerce_flutter/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 import '../../components/widgets.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -26,7 +27,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.background,
-      appBar: const CustomAppBar(title: 'Shoppy'),
+      appBar:  CustomAppBar(title: AppLocalizations.of(context)!.appname),
       body: IndexedStack(
         index: currentIndex,
         children: screens,

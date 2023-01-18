@@ -1,8 +1,10 @@
+import 'package:ecommerce_flutter/screens/product_screen.dart/product_details_container.dart';
+import 'package:ecommerce_flutter/screens/product_screen.dart/product_details_price.dart';
 import 'package:flutter/material.dart';
-
 import '../../models/product_model.dart';
 import '../../spacing.dart';
 import '../../themes.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ProductDetailsBody extends StatelessWidget {
   const ProductDetailsBody({
@@ -18,75 +20,50 @@ class ProductDetailsBody extends StatelessWidget {
       child: Padding(
         padding: Spacings.paddingSliverToBoxAdapter,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Text(
-                  product.modelProductDetails.productName,
-                  style: AppThemeData().appThemeData.textTheme.headline4,
-                ),
-              ],
+            Text(
+              product.modelProductDetails.productName,
+              style: AppThemeData().appThemeData.textTheme.headline4,
             ),
             const SizedBox(
-              height: 18,
+              height: Spacings.heightSizedBoxProductDetailsTitle,
             ),
-            Container(
-              width: double.infinity,
-              height: Spacings.heightContainerDetails,
-              decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: Spacings.borderRadiusContainerDetails),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    ExpansionTile(
-                      title: const Text('Name'),
-                      children: [
-                        ListTile(
-                          title: Text(product.modelProductDetails.productName),
-                        )
-                      ],
-                    ),
-                    ExpansionTile(
-                      title: const Text('Price'),
-                      children: [
-                        ListTile(
-                          title: Text(
-                              '${product.modelProductDetails.priceString}\$'),
-                        )
-                      ],
-                    ),
-                    ExpansionTile(
-                      title: const Text('Material'),
-                      children: [
-                        ListTile(
-                          title: Text(product.modelProductDetails.material),
-                        )
-                      ],
-                    ),
-                    ExpansionTile(
-                      title: const Text('Color'),
-                      children: [
-                        ListTile(
-                          title: Text(product.modelProductDetails.color),
-                        )
-                      ],
-                    ),
-                    ExpansionTile(
-                      title: const Text('Promo Code'),
-                      children: [
-                        ListTile(
-                          title: Text(product.modelProductDetails.promoCode),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+            ProductPrice(product: product),
+            const SizedBox(
+              height: Spacings.heightSizedBoxProductDetais,
+            ),
+            ProductDetailsContainer(
+              product: product,
+              detailsName: AppLocalizations.of(context)!.materials,
+              detailsProduct: product.modelProductDetails.material,
+            ),
+            const SizedBox(
+              height: Spacings.heightSizedBoxProductDetais,
+            ),
+            ProductDetailsContainer(
+                product: product,
+                detailsName: AppLocalizations.of(context)!.colors,
+                detailsProduct: product.modelProductDetails.color.capitalize()),
+            const SizedBox(
+              height: Spacings.heightSizedBoxProductDetais,
+            ),
+            ProductDetailsContainer(
+                product: product,
+                detailsName: AppLocalizations.of(context)!.department,
+                detailsProduct: product.modelProductDetails.department),
+            const SizedBox(
+              height: Spacings.heightSizedBoxProductDetais,
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+extension StringExtension on String {
+  String capitalize() {
+    return "${this[0].toUpperCase()}${substring(1).toLowerCase()}";
   }
 }

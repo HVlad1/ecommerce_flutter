@@ -38,5 +38,22 @@
     "appname" : "Shoppy",
     "@appname": {
         "description": "App title"
+    },
+    "promoCode" : "Promo Code",
+    "@promoCode": {
+        "description": "Promo Code"
+    },
+    "materials" : "Materials",
+    "@materials": {
+        "description": "Materials"
+    },
+    "colors" : "Colors",
+    "@colors": {
+        "description": "Product Color"
+    },
+    "department" : "Department",
+    "@department": {
+        "description": "Department"
     }
+    
 }

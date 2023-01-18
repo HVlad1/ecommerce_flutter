@@ -8,5 +8,9 @@
     "favorites": "Favorite",
     "profile": "Contul meu",
     "error": "Eroare",
-    "appname": "Shoppy"
+    "appname": "Shoppy",
+    "promoCode": "Voucher",
+    "materials": "Materiale",
+    "colors": "Culori",
+    "department": "Departament"
 }
