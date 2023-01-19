@@ -1,3 +1,4 @@
+import 'package:ecommerce_flutter/methods.dart';
 import 'package:ecommerce_flutter/screens/product_screen.dart/product_details_container.dart';
 import 'package:ecommerce_flutter/screens/product_screen.dart/product_details_price.dart';
 import 'package:flutter/material.dart';
@@ -59,11 +60,5 @@ class ProductDetailsBody extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-extension StringExtension on String {
-  String capitalize() {
-    return "${this[0].toUpperCase()}${substring(1).toLowerCase()}";
   }
 }
