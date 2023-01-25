@@ -28,4 +28,13 @@ abstract class Spacings {
   static const paddingDetailsPromoCode = EdgeInsets.all(10.0);
   static const heightSizedBoxProductDetais = 10.0;
   static const heightSizedBoxProductDetailsTitle = 15.0;
+
+  //Category Card
+  static const widthCategoryCard = 160.0;
+  static const borderRadiusCategoryCard = BorderRadius.all(Radius.circular(20.0));
+  static const heightCategoryCard = 140.0;
+  static const paddingCategoryCardContent = EdgeInsets.only(left: 8.0, right: 8.0, top: 35.0);
+  static const sizeIconCategoryCard = 50.0;
+  static const heightSizedBoxCategoryCardContent = 10.0;
+  static const heightSizedBoxCategoryScreen = 15.0;
 }

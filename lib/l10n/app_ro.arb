@@ -12,5 +12,13 @@
     "promoCode": "Voucher",
     "materials": "Materiale",
     "colors": "Culori",
-    "department": "Departament"
+    "department": "Departament",
+    "offers": "Oferte",
+    "sports": "Sport",
+    "it" : "IT, Telefoane & Jocuri",
+    "electronics" : "Electronice",
+    "homeGardening": "Casa & Gradina",
+    "clothes": "Haine",
+    "kids" : "Copii & Jucarii",
+    "music": "Muzica"
 }

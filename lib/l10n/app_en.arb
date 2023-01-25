@@ -54,6 +54,38 @@
     "department" : "Department",
     "@department": {
         "description": "Department"
+    },
+    "offers" : "Offers",
+    "@offers": {
+        "description": "Product offers"
+    },
+    "sports" : "Sports",
+    "@sports": {
+        "description": "Sports"
+    },
+    "it" : "IT, Mobile & Gaming",
+    "@it": {
+        "description": "IT, Mobile & Gaming"
+    },
+     "electronics" : "Electronics",
+    "@electronics": {
+        "description": "Electronics"
+    },
+    "homeGardening" : "Home & Gardening",
+    "@homeGardening": {
+        "description": "Home & Gardening"
+    },
+    "clothes" : "Clothes",
+    "@clothes": {
+        "description": "Clothes"
+    },
+     "kids" : "Kids & Toys",
+    "@kids": {
+        "description": "Kids & Toys"
+    },
+     "music" : "Music",
+    "@music": {
+        "description": "Music"
     }
     
 }
