@@ -1,4 +1,5 @@
 import 'package:ecommerce_flutter/colors.dart';
+import 'package:ecommerce_flutter/screens/category_screen/category_details.dart';
 import 'package:ecommerce_flutter/spacing.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,11 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const CategoryDetails(),
+            ));
       },
       child: Container(
         width: Spacings.widthCategoryCard,
