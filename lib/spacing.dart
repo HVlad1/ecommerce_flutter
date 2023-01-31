@@ -37,4 +37,12 @@ abstract class Spacings {
   static const sizeIconCategoryCard = 50.0;
   static const heightSizedBoxCategoryCardContent = 10.0;
   static const heightSizedBoxCategoryScreen = 15.0;
+
+  static const actionIconSize = 40.0;
+  static const sliverAppBarHeight = 170.0;
+
+  //Product Card Big
+  static const paddingProductCardBig = EdgeInsets.all(8.0);
+  static const widthProductCardImage = 1000.0;
+  static const alignBlackLineTop = 70.0;
 }
