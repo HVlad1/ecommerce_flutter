@@ -23,9 +23,11 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
     final state = this.state;
     if (state is WishlistLoaded) {
       try {
-        List<ProductModel> products = state.wishlist.products;
-        products.add(event.product);
-        emit(WishlistLoaded(wishlist: Wishlist(products: products)));
+        emit(WishlistLoaded(
+          wishlist: Wishlist(
+            products: List.from(state.wishlist.products)..add(event.product),
+          ),
+        ));
       } on Exception {
         emit(WishlistError());
       }

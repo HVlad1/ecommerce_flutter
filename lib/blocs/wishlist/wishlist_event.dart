@@ -10,7 +10,7 @@ class LoadWishlist extends WishlistEvent {
 
 class AddProductToWishlist extends WishlistEvent {
   final ProductModel product;
-  AddProductToWishlist(this.product);
+   AddProductToWishlist(this.product);
 
   @override
   List<Object> get props => [product];
