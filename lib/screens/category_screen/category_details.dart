@@ -62,11 +62,8 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                     );
                   }
                   if (snapshot.connectionState == ConnectionState.done) {
-                    if (context.watch<ProductsCubit>().state
-                        is ProductsLoaded) {
-                      final ProductsLoaded state = context
-                          .watch<ProductsCubit>()
-                          .state as ProductsLoaded;
+                    if (context.watch<ProductsCubit>().state is ProductsLoaded) {
+                      final ProductsLoaded state = context.watch<ProductsCubit>().state as ProductsLoaded;
                       return ListView.builder(
                           scrollDirection: Axis.vertical,
                           shrinkWrap: true,

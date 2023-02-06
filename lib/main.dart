@@ -1,4 +1,3 @@
-
 import 'package:ecommerce_flutter/api/product_details_api.dart';
 import 'package:ecommerce_flutter/api/product_image_api.dart';
 import 'package:ecommerce_flutter/cubit/products_cubit.dart';
@@ -10,6 +9,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'blocs/wishlist/wishlist_bloc.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -19,8 +20,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => ProductsCubit(ProductImageDataService(), ProductDetailsDataService())..getProducts(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => ProductsCubit(
+              ProductImageDataService(), ProductDetailsDataService())
+            ..getProducts(),
+        ),
+        BlocProvider(create: (_) => WishlistBloc()..add(LoadWishlist())),
+      ],
       child: MaterialApp.router(
         supportedLocales: L10n.all,
         localizationsDelegates: const [
