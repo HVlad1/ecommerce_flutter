@@ -86,6 +86,14 @@
      "music" : "Music",
     "@music": {
         "description": "Music"
+    },
+     "added" : "Added to your Wishlist!",
+    "@added": {
+        "description": "Added to your Wishlist when users taps favorite icon"
+    },
+    "deleted" : "Deleted from your Wishlist!",
+    "@added": {
+        "description": "Deleted from the Wishlist when users taps favorite icon"
     }
     
 }

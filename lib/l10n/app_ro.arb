@@ -20,5 +20,7 @@
     "homeGardening": "Casa & Gradina",
     "clothes": "Haine",
     "kids" : "Copii & Jucarii",
-    "music": "Muzica"
+    "music": "Muzica",
+    "added": "Adaugat la Favorite!",
+    "deleted": "Sters de la Favorite!"
 }

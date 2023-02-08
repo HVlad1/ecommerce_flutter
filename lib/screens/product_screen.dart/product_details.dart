@@ -4,7 +4,7 @@ import 'package:ecommerce_flutter/models/product_model.dart';
 import 'package:ecommerce_flutter/screens/product_screen.dart/product_details_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../colors.dart';
 import '../../spacing.dart';
 
@@ -49,17 +49,15 @@ class _ProductDetailsState extends State<ProductDetails> {
                 padding: Spacings.paddingSliverAppBar,
                 child: BlocBuilder<WishlistBloc, WishlistState>(
                   builder: (context, state) {
-                
                     return ActionIcon(
                       onPressed: () {
-                        const snackBar = SnackBar(content: Text('Added yo your Wishlist!'));
+                      final snackBar = SnackBar(content: Text(AppLocalizations.of(context)!.added));
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                        context.read<WishlistBloc>().add(AddProductToWishlist(widget.product));
+                        context.read<WishlistBloc>().add(AddProductToWishlist(widget.product),);
                       },
                       icon: Icons.favorite,
                       scrollController: _scrollController,
                     );
-                  
                   },
                 ),
               ),

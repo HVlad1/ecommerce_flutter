@@ -40,8 +40,8 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
       try {
         emit(WishlistLoaded(
             wishlist: Wishlist(
-                products: List.from(state.wishlist.products)
-                  ..remove(event.product))));
+          products: List.from(state.wishlist.products)..remove(event.product),
+        )));
       } on Exception {
         emit(WishlistError());
       }
