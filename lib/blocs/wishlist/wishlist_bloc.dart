@@ -15,7 +15,7 @@ class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
     on<RemoveProductFromWishlist>(_onRemoveProductFromWishlist);
   }
 
-  void _onLoadWishlist(event, Emitter<WishlistState> emit) async {
+  void _onLoadWishlist(event, Emitter<WishlistState> emit) {
     emit(WishlistLoaded());
   }
 

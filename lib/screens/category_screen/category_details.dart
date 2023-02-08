@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../colors.dart';
 import '../../components/action_icon.dart';
-import '../../components/product_card_big.dart';
+import '../../components/product_card_big/product_card_big.dart';
 import '../../cubit/products_cubit.dart';
 import '../../spacing.dart';
 

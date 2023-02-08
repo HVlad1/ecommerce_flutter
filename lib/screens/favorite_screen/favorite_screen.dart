@@ -2,7 +2,7 @@ import 'package:ecommerce_flutter/blocs/wishlist/wishlist_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import '../../components/product_card_big.dart';
+import '../../components/product_card_big/product_card_big.dart';
 
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({super.key});
