@@ -1,22 +1,42 @@
+import 'package:ecommerce_flutter/models/product_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../blocs/wishlist/cart/cart_bloc.dart';
 import '../../colors.dart';
 
-class AddIcon extends StatelessWidget {
+class AddIcon extends StatefulWidget {
+  final ProductModel product;
   const AddIcon({
     Key? key,
+    required this.product,
   }) : super(key: key);
 
   @override
+  State<AddIcon> createState() => _AddIconState();
+}
+
+class _AddIconState extends State<AddIcon> {
+  @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: IconButton(
-          splashColor: Colors.transparent,
-          onPressed: () {},
-          icon: const Icon(
-            Icons.add_circle,
-            color: CustomColors.onPrimary,
-          )),
+      child: BlocBuilder<CartBloc, CartState>(
+        builder: (context, state) {
+          return IconButton(
+              splashColor: Colors.transparent,
+              onPressed: () {
+                const snackBar = SnackBar(content: Text('Added to cart'));
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                context.read<CartBloc>().add(
+                      AddProductToCartList(widget.product),
+                    );
+              },
+              icon: const Icon(
+                Icons.add_circle,
+                color: CustomColors.onPrimary,
+              ));
+        },
+      ),
     );
   }
 }

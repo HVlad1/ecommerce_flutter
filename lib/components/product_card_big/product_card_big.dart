@@ -35,7 +35,7 @@ class _ProductCardBigState extends State<ProductCardBig> {
         decoration: const BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: Colors.black,
+              color: CustomColors.primary,
               blurRadius: 33.0,
               offset: Offset(
                 20.0,
@@ -70,7 +70,7 @@ class _ProductCardBigState extends State<ProductCardBig> {
                       child: Row(
                         children: [
                           BigCardNameAndPrice(widget: widget),
-                          const AddIcon(),
+                           AddIcon(product: widget.product,),
                           widget.isWishlist
                               ? DeleteIcon(widget: widget)
                               : const SizedBox(),

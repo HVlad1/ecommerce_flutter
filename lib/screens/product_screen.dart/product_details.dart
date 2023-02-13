@@ -1,3 +1,4 @@
+import 'package:ecommerce_flutter/blocs/wishlist/cart/cart_bloc.dart';
 import 'package:ecommerce_flutter/blocs/wishlist/wishlist_bloc.dart';
 import 'package:ecommerce_flutter/components/action_icon.dart';
 import 'package:ecommerce_flutter/models/product_model.dart';
@@ -23,13 +24,23 @@ class _ProductDetailsState extends State<ProductDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CustomColors.primary,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: CustomColors.secondary,
-        child: const Icon(
-          Icons.shopping_cart,
-          color: CustomColors.primary,
-        ),
+      floatingActionButton: BlocBuilder<CartBloc, CartState>(
+        builder: (context, state) {
+          return FloatingActionButton(
+            onPressed: () {
+              const snackBar = SnackBar(content: Text('Added to cart'));
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              context.read<CartBloc>().add(
+                    AddProductToCartList(widget.product),
+                  );
+            },
+            backgroundColor: CustomColors.secondary,
+            child: const Icon(
+              Icons.shopping_cart,
+              color: CustomColors.primary,
+            ),
+          );
+        },
       ),
       body: CustomScrollView(
         controller: _scrollController,
@@ -51,9 +62,12 @@ class _ProductDetailsState extends State<ProductDetails> {
                   builder: (context, state) {
                     return ActionIcon(
                       onPressed: () {
-                      final snackBar = SnackBar(content: Text(AppLocalizations.of(context)!.added));
+                        final snackBar = SnackBar(
+                            content: Text(AppLocalizations.of(context)!.added));
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                        context.read<WishlistBloc>().add(AddProductToWishlist(widget.product),);
+                        context.read<WishlistBloc>().add(
+                              AddProductToWishlist(widget.product),
+                            );
                       },
                       icon: Icons.favorite,
                       scrollController: _scrollController,

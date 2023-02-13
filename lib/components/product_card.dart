@@ -1,14 +1,21 @@
+import 'package:ecommerce_flutter/blocs/wishlist/cart/cart_bloc.dart';
 import 'package:ecommerce_flutter/colors.dart';
 import 'package:ecommerce_flutter/models/product_model.dart';
 import 'package:ecommerce_flutter/spacing.dart';
 import 'package:ecommerce_flutter/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/radius.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ProductCard extends StatelessWidget {
+class ProductCard extends StatefulWidget {
   final ProductModel product;
   const ProductCard({super.key, required this.product});
 
+  @override
+  State<ProductCard> createState() => _ProductCardState();
+}
+
+class _ProductCardState extends State<ProductCard> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -20,7 +27,7 @@ class ProductCard extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.5,
             height: Spacings.heightProductCard,
             child: Image.network(
-              product.downloadUrl,
+              widget.product.downloadUrl,
               fit: BoxFit.cover,
             ),
           ),
@@ -44,14 +51,14 @@ class ProductCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            product.modelProductDetails.productName.length > 15
-                                ? '${product.modelProductDetails.productName.substring(0, 15)}...'
-                                : product.modelProductDetails.productName,
+                            widget.product.modelProductDetails.productName.length > 15
+                                ? '${widget.product.modelProductDetails.productName.substring(0, 15)}...'
+                                : widget.product.modelProductDetails.productName,
                             style:
                                 AppThemeData().appThemeData.textTheme.bodyText1,
                           ),
                           Text(
-                            '${product.modelProductDetails.priceString}\$',
+                            '${widget.product.modelProductDetails.priceString}\$',
                             style:
                                 AppThemeData().appThemeData.textTheme.bodyText1,
                           ),
@@ -59,13 +66,21 @@ class ProductCard extends StatelessWidget {
                       ),
                     ),
                     Expanded(
-                      child: IconButton(
-                        splashColor: Colors.transparent,
-                          onPressed: () {},
-                          icon: const Icon(
-                            Icons.add_circle,
-                            color: CustomColors.onPrimary,
-                          )),
+                      child: BlocBuilder<CartBloc, CartState>(
+                        builder: (context, state) {
+                          return IconButton(
+                              splashColor: Colors.transparent,
+                              onPressed: () {
+                                const snackBar = SnackBar(content: Text('Added to cart'));
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                        context.read<CartBloc>().add(AddProductToCartList(widget.product),);
+                              },
+                              icon: const Icon(
+                                Icons.add_circle,
+                                color: CustomColors.onPrimary,
+                              ));
+                        },
+                      ),
                     )
                   ],
                 ),
