@@ -94,6 +94,26 @@
     "deleted" : "Deleted from your Wishlist!",
     "@added": {
         "description": "Deleted from the Wishlist when users taps favorite icon"
+    },
+    "addMoreItems" : "Add more Items",
+    "@addMoreItems": {
+        "description": "Add more items button"
+    },
+    "subtotal" : "SUBTOTAL",
+    "@subtotal": {
+        "description": "Subtotal"
+    },
+    "deliveryFee" : "DELIVERY FEE",
+    "@deliveryFee": {
+        "description": "DELIVERY FEE"
+    },
+    "total" : "TOTAL",
+    "@total": {
+        "description": "Total price"
+    },
+     "addedToCart" : "Added to Cart!",
+    "@addedToCart": {
+        "description": "Added to cart"
     }
     
 }

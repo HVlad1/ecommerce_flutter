@@ -56,4 +56,13 @@ abstract class Spacings {
   static const shapeSliver = RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)));
   static const sizeIconBackground = 150.0;
   static const paddingCircularProgressIndicator = EdgeInsets.all(8.0);
+
+  //Cart Screen
+  static const paddingCartScreen = EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0);
+  static const paddingSubTotalCartScreen = EdgeInsets.symmetric(horizontal: 40.0, vertical: 10.0);
+  static const heightSizedBoxCartScreen = 5.0;
+  static const heightTotalPriceCartScreen = 60.0;
+  static const heightTotalPriceCartScreenBlack= 50.0;
+  static const marginTotalPriceContainer = EdgeInsets.all(5.0);
+  static const paddingTotalPriceContainer = EdgeInsets.symmetric(horizontal: 20.0);
 }

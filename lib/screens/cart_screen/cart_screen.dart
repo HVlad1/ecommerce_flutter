@@ -1,9 +1,10 @@
 import 'package:ecommerce_flutter/blocs/wishlist/cart/cart_bloc.dart';
 import 'package:ecommerce_flutter/colors.dart';
+import 'package:ecommerce_flutter/spacing.dart';
 import 'package:ecommerce_flutter/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'cart_product_card.dart';
 
 class CartScreen extends StatefulWidget {
@@ -27,7 +28,7 @@ class _CartScreenState extends State<CartScreen> {
         if (state is CartLoaded) {
           return Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                Spacings.paddingCartScreen,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -45,12 +46,13 @@ class _CartScreenState extends State<CartScreen> {
                             ),
                             ElevatedButton(
                                 onPressed: () {},
-                                child: const Text('Add more Items'))
+                                child:  Text(AppLocalizations.of(context)!.addMoreItems))
                           ],
                         ),
                       SizedBox(child: ListView.builder(
                         itemCount: state.cart.products.length,
                         scrollDirection: Axis.vertical,
+                        physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemBuilder: (context, index) =>CartProductCard(product: state.cart.products[index],)),)
                       ],
@@ -61,14 +63,13 @@ class _CartScreenState extends State<CartScreen> {
                   children: [
                     const Divider(thickness: 1, color: CustomColors.primary),
                     Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 40.0, vertical: 10.0),
+                      padding: Spacings.paddingSubTotalCartScreen,
                       child: Column(
                         children: [
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('SUBTOTAL',
+                              Text(AppLocalizations.of(context)!.subtotal,
                                   style: AppThemeData()
                                       .appThemeData
                                       .textTheme
@@ -76,13 +77,13 @@ class _CartScreenState extends State<CartScreen> {
                               Text('\$${state.cart.subtotalString}'),
                             ],
                           ),
-                          const SizedBox(
-                            height: 5,
+                           const SizedBox(
+                            height: Spacings.heightSizedBoxCartScreen,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Text('DELIVERY FEE',
+                              Text(AppLocalizations.of(context)!.deliveryFee,
                                   style: AppThemeData()
                                       .appThemeData
                                       .textTheme
@@ -97,34 +98,34 @@ class _CartScreenState extends State<CartScreen> {
                       children: [
                         Container(
                           width: MediaQuery.of(context).size.width,
-                          height: 60,
+                          height: Spacings.heightTotalPriceCartScreen,
                           decoration: BoxDecoration(
                               color: CustomColors.primary.withAlpha(50)),
                         ),
                         Container(
                           width: MediaQuery.of(context).size.width,
-                          height: 50,
-                          margin: const EdgeInsets.all(5.0),
+                          height: Spacings.heightTotalPriceCartScreenBlack,
+                          margin: Spacings.marginTotalPriceContainer,
                           decoration:
                               const BoxDecoration(color: CustomColors.primary),
                           child: Padding(
                             padding:
-                                const EdgeInsets.symmetric(horizontal: 20.0),
+                                Spacings.paddingTotalPriceContainer,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('TOTAL',
+                                Text(AppLocalizations.of(context)!.total,
                                     style: AppThemeData()
                                         .appThemeData
                                         .textTheme
                                         .headline5!
-                                        .copyWith(color: Colors.white)),
+                                        .copyWith(color: CustomColors.secondary)),
                                 Text('\$${state.cart.totalString}',
                                     style: AppThemeData()
                                         .appThemeData
                                         .textTheme
                                         .headline5!
-                                        .copyWith(color: Colors.white)),
+                                        .copyWith(color: CustomColors.secondary)),
                               ],
                             ),
                           ),
@@ -137,7 +138,7 @@ class _CartScreenState extends State<CartScreen> {
             ),
           );
         } else {
-          return const Text('Something went wrong');
+          return  Text(AppLocalizations.of(context)!.error);
         }
       },
     ));

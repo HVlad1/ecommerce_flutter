@@ -6,6 +6,7 @@ import 'package:ecommerce_flutter/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerce_flutter/radius.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ProductCard extends StatefulWidget {
   final ProductModel product;
@@ -71,7 +72,7 @@ class _ProductCardState extends State<ProductCard> {
                           return IconButton(
                               splashColor: Colors.transparent,
                               onPressed: () {
-                                const snackBar = SnackBar(content: Text('Added to cart'));
+                              final   snackBar = SnackBar(content: Text(AppLocalizations.of(context)!.addedToCart));
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
                         context.read<CartBloc>().add(AddProductToCartList(widget.product),);
                               },

@@ -22,5 +22,10 @@
     "kids" : "Copii & Jucarii",
     "music": "Muzica",
     "added": "Adaugat la Favorite!",
-    "deleted": "Sters de la Favorite!"
+    "deleted": "Sters de la Favorite!",
+    "addMoreItems": "Adauga itemi",
+    "subtotal": "SUBTOTAL",
+    "deliveryFee": "TAXA DE LIVRARE",
+    "total": "TOTAL",
+    "addedToCart": "Adaugat in Cos!"
 }

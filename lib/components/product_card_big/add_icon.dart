@@ -1,7 +1,7 @@
 import 'package:ecommerce_flutter/models/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../blocs/wishlist/cart/cart_bloc.dart';
 import '../../colors.dart';
 
@@ -25,7 +25,7 @@ class _AddIconState extends State<AddIcon> {
           return IconButton(
               splashColor: Colors.transparent,
               onPressed: () {
-                const snackBar = SnackBar(content: Text('Added to cart'));
+                final snackBar = SnackBar(content: Text(AppLocalizations.of(context)!.addedToCart));
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 context.read<CartBloc>().add(
                       AddProductToCartList(widget.product),

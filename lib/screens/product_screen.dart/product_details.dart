@@ -28,7 +28,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         builder: (context, state) {
           return FloatingActionButton(
             onPressed: () {
-              const snackBar = SnackBar(content: Text('Added to cart'));
+              final snackBar = SnackBar(content: Text(AppLocalizations.of(context)!.addedToCart));
               ScaffoldMessenger.of(context).showSnackBar(snackBar);
               context.read<CartBloc>().add(
                     AddProductToCartList(widget.product),
