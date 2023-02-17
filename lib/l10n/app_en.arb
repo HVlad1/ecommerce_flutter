@@ -114,6 +114,10 @@
      "addedToCart" : "Added to Cart!",
     "@addedToCart": {
         "description": "Added to cart"
+    },
+    "deletedFromCart" : "Deleted from Cart!",
+    "@deletedFromCart": {
+        "description": "Deleted from cart"
     }
     
 }

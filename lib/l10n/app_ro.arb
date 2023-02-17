@@ -27,5 +27,6 @@
     "subtotal": "SUBTOTAL",
     "deliveryFee": "TAXA DE LIVRARE",
     "total": "TOTAL",
-    "addedToCart": "Adaugat in Cos!"
+    "addedToCart": "Adaugat in Cos!",
+    "deletedFromCart": "Sters din Cos!"
 }

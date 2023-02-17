@@ -65,4 +65,5 @@ abstract class Spacings {
   static const heightTotalPriceCartScreenBlack= 50.0;
   static const marginTotalPriceContainer = EdgeInsets.all(5.0);
   static const paddingTotalPriceContainer = EdgeInsets.symmetric(horizontal: 20.0);
+  static const paddingCartProductCard = EdgeInsets.only(top: 8.0);
 }

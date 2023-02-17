@@ -5,6 +5,17 @@ class Cart extends Equatable {
   final List<ProductModel> products;
   const Cart({this.products = const <ProductModel>[]});
 
+
+  Map productQuantity(products) {
+    var quantity = {};
+    products.forEach((product) {
+      if(!quantity.containsKey(product)) {
+        quantity[product] = 1;
+      } else { quantity[product] += 1;}
+    });
+    return quantity;
+  }
+
   double get subtotal =>
       products.fold(0, (total, current) => total + current.modelProductDetails.price);
 

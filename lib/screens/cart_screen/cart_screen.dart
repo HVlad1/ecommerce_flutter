@@ -17,8 +17,7 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: BlocBuilder<CartBloc, CartState>(
+    return Scaffold(body: BlocBuilder<CartBloc, CartState>(
       builder: (context, state) {
         if (state is CartLoading) {
           return const Center(
@@ -27,8 +26,7 @@ class _CartScreenState extends State<CartScreen> {
         }
         if (state is CartLoaded) {
           return Padding(
-            padding:
-                Spacings.paddingCartScreen,
+            padding: Spacings.paddingCartScreen,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -41,20 +39,55 @@ class _CartScreenState extends State<CartScreen> {
                           children: [
                             Text(
                               state.cart.freeDeliveryString,
-                              style:
-                                  AppThemeData().appThemeData.textTheme.headline5,
+                              style: AppThemeData()
+                                  .appThemeData
+                                  .textTheme
+                                  .headline5,
                             ),
                             ElevatedButton(
                                 onPressed: () {},
-                                child:  Text(AppLocalizations.of(context)!.addMoreItems))
+                                child: Text(
+                                    AppLocalizations.of(context)!.addMoreItems))
                           ],
                         ),
-                      SizedBox(child: ListView.builder(
-                        itemCount: state.cart.products.length,
-                        scrollDirection: Axis.vertical,
-                        physics: const NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemBuilder: (context, index) =>CartProductCard(product: state.cart.products[index],)),)
+                        SizedBox(
+                          child: ListView.builder(
+                              itemCount: state.cart
+                                  .productQuantity(state.cart.products)
+                                  .keys
+                                  .length,
+                              scrollDirection: Axis.vertical,
+                              physics: const NeverScrollableScrollPhysics(),
+                              shrinkWrap: true,
+                              itemBuilder: (context, index) => Dismissible(
+                                  key: UniqueKey(),
+                                  onDismissed: (direction) {
+                                    setState(() {
+                                      state.cart.products.removeAt(index);
+                                    });
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                        SnackBar(
+                                            content: Text(
+                                                AppLocalizations.of(context)!
+                                                    .deletedFromCart)));
+                                  },
+                                  background: Container(
+                                    color: Colors.red,
+                                    child: const Icon(
+                                      Icons.delete,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  child: CartProductCard(
+                                      product: state.cart
+                                          .productQuantity(state.cart.products)
+                                          .keys
+                                          .elementAt(index),
+                                      quantity: state.cart
+                                          .productQuantity(state.cart.products)
+                                          .values
+                                          .elementAt(index)))),
+                        )
                       ],
                     ),
                   ),
@@ -77,7 +110,7 @@ class _CartScreenState extends State<CartScreen> {
                               Text('\$${state.cart.subtotalString}'),
                             ],
                           ),
-                           const SizedBox(
+                          const SizedBox(
                             height: Spacings.heightSizedBoxCartScreen,
                           ),
                           Row(
@@ -109,8 +142,7 @@ class _CartScreenState extends State<CartScreen> {
                           decoration:
                               const BoxDecoration(color: CustomColors.primary),
                           child: Padding(
-                            padding:
-                                Spacings.paddingTotalPriceContainer,
+                            padding: Spacings.paddingTotalPriceContainer,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -119,13 +151,15 @@ class _CartScreenState extends State<CartScreen> {
                                         .appThemeData
                                         .textTheme
                                         .headline5!
-                                        .copyWith(color: CustomColors.secondary)),
+                                        .copyWith(
+                                            color: CustomColors.secondary)),
                                 Text('\$${state.cart.totalString}',
                                     style: AppThemeData()
                                         .appThemeData
                                         .textTheme
                                         .headline5!
-                                        .copyWith(color: CustomColors.secondary)),
+                                        .copyWith(
+                                            color: CustomColors.secondary)),
                               ],
                             ),
                           ),
@@ -138,7 +172,7 @@ class _CartScreenState extends State<CartScreen> {
             ),
           );
         } else {
-          return  Text(AppLocalizations.of(context)!.error);
+          return Text(AppLocalizations.of(context)!.error);
         }
       },
     ));
