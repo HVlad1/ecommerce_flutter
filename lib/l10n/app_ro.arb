@@ -28,5 +28,15 @@
     "deliveryFee": "TAXA DE LIVRARE",
     "total": "TOTAL",
     "addedToCart": "Adaugat in Cos!",
-    "deletedFromCart": "Sters din Cos!"
+    "deletedFromCart": "Sters din Cos!",
+    "checkout" : "Verificare",
+    "customerInformation": "DATELE CLIENTULUI",
+    "checkoutEmail": "Email",
+    "checkoutFullName": "Numele complet",
+    "deliveryInformation": "INFORMATII LIVRARE",
+    "address": "Adresa",
+    "city": "Oras",
+    "country": "Tara",
+    "zipCode": "Cod Zip",
+    "orderSummary": "REZUMAT COMANDA"
 }

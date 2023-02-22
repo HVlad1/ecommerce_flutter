@@ -1,11 +1,12 @@
 import 'package:ecommerce_flutter/blocs/wishlist/cart/cart_bloc.dart';
-import 'package:ecommerce_flutter/colors.dart';
+import 'package:ecommerce_flutter/screens/checkout_screen/checkout_screen.dart';
 import 'package:ecommerce_flutter/spacing.dart';
 import 'package:ecommerce_flutter/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'cart_product_card.dart';
+import 'order_summary.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -92,82 +93,9 @@ class _CartScreenState extends State<CartScreen> {
                     ),
                   ),
                 ),
-                Column(
-                  children: [
-                    const Divider(thickness: 1, color: CustomColors.primary),
-                    Padding(
-                      padding: Spacings.paddingSubTotalCartScreen,
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(AppLocalizations.of(context)!.subtotal,
-                                  style: AppThemeData()
-                                      .appThemeData
-                                      .textTheme
-                                      .headline5),
-                              Text('\$${state.cart.subtotalString}'),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: Spacings.heightSizedBoxCartScreen,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(AppLocalizations.of(context)!.deliveryFee,
-                                  style: AppThemeData()
-                                      .appThemeData
-                                      .textTheme
-                                      .headline5),
-                              Text('\$${state.cart.deliveryFeeString}'),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    Stack(
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          height: Spacings.heightTotalPriceCartScreen,
-                          decoration: BoxDecoration(
-                              color: CustomColors.primary.withAlpha(50)),
-                        ),
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          height: Spacings.heightTotalPriceCartScreenBlack,
-                          margin: Spacings.marginTotalPriceContainer,
-                          decoration:
-                              const BoxDecoration(color: CustomColors.primary),
-                          child: Padding(
-                            padding: Spacings.paddingTotalPriceContainer,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(AppLocalizations.of(context)!.total,
-                                    style: AppThemeData()
-                                        .appThemeData
-                                        .textTheme
-                                        .headline5!
-                                        .copyWith(
-                                            color: CustomColors.secondary)),
-                                Text('\$${state.cart.totalString}',
-                                    style: AppThemeData()
-                                        .appThemeData
-                                        .textTheme
-                                        .headline5!
-                                        .copyWith(
-                                            color: CustomColors.secondary)),
-                              ],
-                            ),
-                          ),
-                        )
-                      ],
-                    )
-                  ],
-                ),
+                 GestureDetector(
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const CheckoutScreen())),
+                  child: const OrderSummary()),
               ],
             ),
           );

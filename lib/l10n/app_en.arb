@@ -118,6 +118,46 @@
     "deletedFromCart" : "Deleted from Cart!",
     "@deletedFromCart": {
         "description": "Deleted from cart"
+    },
+    "checkout" : "Checkout",
+    "@checkout": {
+        "description": "Checkout title"
+    },
+    "customerInformation" : "CUSTOMER INFORMATION",
+    "@customerInformation": {
+        "description": "Customer information"
+    },
+    "checkoutEmail" : "Email",
+    "@checkoutEmail": {
+        "description": " Customer email"
+    },
+    "checkoutFullName" : "Full Name",
+    "@checkoutFullName": {
+        "description": " Customer full name"
+    },
+    "deliveryInformation" : "DELIVERY INFORMATION",
+    "@deliveryInformation": {
+        "description": "Delivery information"
+    },
+    "address" : "Address",
+    "@address": {
+        "description": "Customer address"
+    },
+    "city" : "City",
+    "@city": {
+        "description": "Customer city"
+    },
+    "country" : "Country",
+    "@country": {
+        "description": "Customer country"
+    },
+    "zipCode" : "Zip Code",
+    "@zipCode": {
+        "description": "Customer zip code"
+    },
+    "orderSummary" : "ORDER SUMMARY",
+    "@orderSummary": {
+        "description": "Order summary"
     }
     
 }
