@@ -66,4 +66,9 @@ abstract class Spacings {
   static const marginTotalPriceContainer = EdgeInsets.all(5.0);
   static const paddingTotalPriceContainer = EdgeInsets.symmetric(horizontal: 20.0);
   static const paddingCartProductCard = EdgeInsets.only(top: 8.0);
+
+  //Checkout Screen
+  static const paddingCheckoutScreen = EdgeInsets.all(20.0);
+  static const paddingCheckoutFormField = EdgeInsets.all(8.0);
+  static const widthSizedBoxFormField = 75.0;
 }

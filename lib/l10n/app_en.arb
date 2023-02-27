@@ -158,6 +158,14 @@
     "orderSummary" : "ORDER SUMMARY",
     "@orderSummary": {
         "description": "Order summary"
+    },
+     "delete" : "Delete",
+    "@delete": {
+        "description": "Delete text"
+    },
+    "share" : "Share",
+    "@share": {
+        "description": "Share text"
     }
     
 }

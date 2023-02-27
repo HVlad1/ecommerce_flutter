@@ -38,5 +38,7 @@
     "city": "Oras",
     "country": "Tara",
     "zipCode": "Cod Zip",
-    "orderSummary": "REZUMAT COMANDA"
+    "orderSummary": "REZUMAT COMANDA",
+    "delete": "Sterge",
+    "share": "Distribuie"
 }
