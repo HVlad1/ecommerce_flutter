@@ -72,7 +72,8 @@ class _CartScreenState extends State<CartScreen> {
                                             foregroundColor:
                                                 CustomColors.secondary,
                                             icon: Icons.share,
-                                            label: AppLocalizations.of(context)!.share,
+                                            label: AppLocalizations.of(context)!
+                                                .share,
                                           ),
                                           SlidableAction(
                                             onPressed: (context) {
@@ -85,7 +86,8 @@ class _CartScreenState extends State<CartScreen> {
                                             foregroundColor:
                                                 CustomColors.secondary,
                                             icon: Icons.delete,
-                                            label: AppLocalizations.of(context)!.delete,
+                                            label: AppLocalizations.of(context)!
+                                                .delete,
                                           ),
                                         ]),
                                     child: CartProductCard(

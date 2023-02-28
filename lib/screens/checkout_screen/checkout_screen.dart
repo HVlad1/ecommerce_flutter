@@ -1,6 +1,7 @@
 import 'package:ecommerce_flutter/colors.dart';
 import 'package:ecommerce_flutter/components/widgets.dart';
 import 'package:ecommerce_flutter/screens/cart_screen/order_summary.dart';
+import 'package:ecommerce_flutter/screens/order_information_screen/order_information_screen.dart';
 import 'package:ecommerce_flutter/spacing.dart';
 import 'package:ecommerce_flutter/themes.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     context
                       .read<CheckoutBloc>()
                       .add(ConfirmCheckout(checkout: state.checkout));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const OrderConfirmation()));
                 } else {
                  const SizedBox();
                 }
