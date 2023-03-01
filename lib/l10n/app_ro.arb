@@ -40,5 +40,7 @@
     "zipCode": "Cod Zip",
     "orderSummary": "REZUMAT COMANDA",
     "delete": "Sterge",
-    "share": "Distribuie"
+    "share": "Distribuie",
+    "orderConfirmed": "Comanda ta a fost inregistrata",
+    "continueShopping": "Continua Cumparaturile"
 }

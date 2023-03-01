@@ -166,6 +166,14 @@
     "share" : "Share",
     "@share": {
         "description": "Share text"
+    },
+    "orderConfirmed" : "Your order is confirmed!",
+    "@orderConfirmed": {
+        "description": "Confirmation text for order"
+    },
+    "continueShopping" : "Continue Shopping",
+    "@continueShopping": {
+        "description": "Continue shopping"
     }
     
 }
