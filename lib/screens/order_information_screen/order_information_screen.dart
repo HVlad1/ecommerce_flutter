@@ -31,7 +31,7 @@ class _OrderConfirmationState extends State<OrderConfirmation> {
                               title: GetOrderData(documentId: orderId[index]),
                             );
                           });
-                    })))
+                    }))),
           ],
         ),
       ),

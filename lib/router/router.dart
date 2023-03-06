@@ -1,6 +1,9 @@
+import 'package:ecommerce_flutter/screens/login_screen/auth_page.dart';
 import 'package:ecommerce_flutter/screens/screens.dart';
 import 'package:ecommerce_flutter/screens/splash_screen/splash_screen.dart';
 import 'package:go_router/go_router.dart';
+
+import '../screens/register_screen/register_screen.dart';
 
 final router = GoRouter(
   routes: [
@@ -10,11 +13,11 @@ final router = GoRouter(
     ),
     GoRoute(
       path: '/login',
-      builder: (context, state) => const LoginScreen(),
+      builder: (context, state) =>   LoginScreen(onTap: () {  },),
     ),
     GoRoute(
       path: '/register',
-      builder: (context, state) => const RegisterScreen(),
+      builder: (context, state) =>  RegisterScreen(onTap: () {  },),
     ),
     GoRoute(
       path: '/category',
@@ -31,6 +34,10 @@ final router = GoRouter(
     GoRoute(
       path: '/profile',
       builder: (context, state) => const ProfileScreen(),
+    ),
+     GoRoute(
+      path: '/authPage',
+      builder: (context, state) => const AuthPage(),
     ),
     GoRoute(
       path: '/',
