@@ -71,4 +71,18 @@ abstract class Spacings {
   static const paddingCheckoutScreen = EdgeInsets.all(20.0);
   static const paddingCheckoutFormField = EdgeInsets.all(8.0);
   static const widthSizedBoxFormField = 75.0;
+
+  //Login/Register Screen
+  static const heightSizedBoxLogIn25 = 25.0;
+  static const heightSizedBoxLogIn10 = 10.0;
+  static const heightSizedBoxLogIn50 = 50.0;
+  static const widthSizedBoxLogIn25 = 25.0;
+  static const widthSizedBoxLogIn5 = 5.0;
+
+  static const paddingTextField = EdgeInsets.symmetric(horizontal: 25.0);
+  static const paddingForgotPassword = EdgeInsets.symmetric(horizontal: 25.0);
+
+  static const paddingContainerSignInButton = EdgeInsets.all(25.0);
+  static const marginContainerSignInButton = EdgeInsets.symmetric(horizontal: 25.0);
+  static BorderRadius borderRadiusSignInButton = BorderRadius.circular(10.0);
 }

@@ -1,9 +1,11 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../colors.dart';
 import '../repo/firestore_methods.dart';
+import '../spacing.dart';
 
 class SignInButton extends StatelessWidget {
   const SignInButton({
@@ -29,15 +31,15 @@ class SignInButton extends StatelessWidget {
         }
       },
       child: Container(
-        padding: const EdgeInsets.all(25.0),
-        margin: const EdgeInsets.symmetric(horizontal: 25.0),
+        padding: Spacings.paddingContainerSignInButton,
+        margin: Spacings.marginContainerSignInButton,
         decoration: BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.circular(10.0)),
-        child: const Center(
+            color: CustomColors.primary,
+            borderRadius: Spacings.borderRadiusSignInButton),
+        child:  Center(
           child: Text(
-            'Sign In',
-            style: TextStyle(
+            AppLocalizations.of(context)!.signIn,
+            style: const TextStyle(
                 color: CustomColors.secondary,
                 fontWeight: FontWeight.bold,
                 fontSize: 16),

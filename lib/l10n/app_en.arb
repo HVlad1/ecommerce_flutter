@@ -174,6 +174,60 @@
     "continueShopping" : "Continue Shopping",
     "@continueShopping": {
         "description": "Continue shopping"
+    },
+    "welcomeBack" : "Welcome back!",
+    "@welcomeBack": {
+        "description": "Welcome back text from login"
+    },
+    "username" : "Username",
+    "@username": {
+        "description": "Username for login textfield"
+    },
+    "password" : "Password",
+    "@password": {
+        "description": "Password for login textfield"
+    },
+    "notMember" : "Not a member?",
+    "@notMember": {
+        "description": "Not a member text for login"
+    },
+    "registerNow" : "Register now",
+    "@registerNow": {
+        "description": "Register now text for login"
+    },
+    "forgotPass" : "Forgot Password?",
+    "@forgotPass": {
+        "description": "Forgot password text for login"
+    },
+    "continueWith" : "Or continue with",
+    "@continueWith": {
+        "description": "Continue with text for login"
+    },
+    "createAccount" : "Create an account with email",
+    "@createAccount": {
+        "description": "Create account with text for register"
+    },
+    "confirmPassword" : "Confirm password",
+    "@confirmPassword": {
+        "description": "Confirm password for text field"
+    },
+    "alreadyHaveAccount" : "Already have an account?",
+    "@alreadyHaveAccount": {
+        "description": "Already have an account text"
+    },
+    "loginNow" : "Login now",
+    "@loginNow": {
+        "description": "Login now text"
+    },
+    "signIn" : "Sign In",
+    "@signIn": {
+        "description": "Sign in text"
+    },
+    "signUp" : "Sign Up",
+    "@signUp": {
+        "description": "Sign up text"
     }
+    
+    
     
 }

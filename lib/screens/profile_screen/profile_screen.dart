@@ -1,5 +1,4 @@
-import 'package:ecommerce_flutter/repo/firestore_methods.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:ecommerce_flutter/screens/order_information_screen/order_information_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -12,19 +11,9 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance.currentUser!;
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          FirestoreDataService().signOut();
-        },
-        backgroundColor: Colors.green,
-        child: const Icon(Icons.navigation),
-      ),
-      body: Center(
-        child: Text("Logged in:${user.email!}"),
-      ),
+      body: OrderConfirmation(),
     );
   }
 }

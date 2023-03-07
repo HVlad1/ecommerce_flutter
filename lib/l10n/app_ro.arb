@@ -42,5 +42,18 @@
     "delete": "Sterge",
     "share": "Distribuie",
     "orderConfirmed": "Comanda ta a fost inregistrata",
-    "continueShopping": "Continua Cumparaturile"
+    "continueShopping": "Continua Cumparaturile",
+    "welcomeBack": "Bine ai revenit!",
+    "username": "Utilizator",
+    "password": "Parola",
+    "notMember": "Nu esti membru?",
+    "registerNow": "Inregistreaza-te acum",
+    "forgotPass": "Ai uitat parola?",
+    "continueWith": "Sau continua cu",
+    "createAccount": "Creeaza cont cu adresa de email",
+    "confirmPassword": "Confirma parola",
+    "alreadyHaveAccount": "Ai deja un cont?",
+    "loginNow": "Autentifica-te acum",
+    "signIn": "Logheaza-te",
+    "signUp": "Inregistreaza-te"
 }

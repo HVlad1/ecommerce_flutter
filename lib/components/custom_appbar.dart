@@ -3,6 +3,8 @@ import 'package:ecommerce_flutter/spacing.dart';
 import 'package:ecommerce_flutter/themes.dart';
 import 'package:flutter/material.dart';
 
+import '../repo/firestore_methods.dart';
+
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   final String title;
 
@@ -27,8 +29,8 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
       iconTheme: const IconThemeData(color: CustomColors.primary),
       actions: [
         IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.search),
+          onPressed: () {FirestoreDataService().signOut();},
+          icon: const Icon(Icons.logout),
         )
       ],
     );

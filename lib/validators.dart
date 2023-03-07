@@ -59,6 +59,7 @@ String? zipCodeValidator(String? value) {
 }
 
 String? passwordValidator(String? value) {
+  // ex: Test1234*
   String pattern =
       r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
   RegExp regExp = RegExp(pattern);
