@@ -29,7 +29,7 @@ class DividerRow extends StatelessWidget {
               style: AppThemeData()
                   .appThemeData
                   .textTheme
-                  .bodyText2
+                  .bodyMedium
                   ?.copyWith(color: Colors.grey[700]),
             ),
           ),

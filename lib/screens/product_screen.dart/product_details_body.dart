@@ -25,7 +25,7 @@ class ProductDetailsBody extends StatelessWidget {
           children: [
             Text(
               product.modelProductDetails.productName,
-              style: AppThemeData().appThemeData.textTheme.headline4,
+              style: AppThemeData().appThemeData.textTheme.headlineMedium,
             ),
             const SizedBox(
               height: Spacings.heightSizedBoxProductDetailsTitle,

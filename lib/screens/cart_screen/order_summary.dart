@@ -28,7 +28,7 @@ class OrderSummary extends StatelessWidget {
                             style: AppThemeData()
                                 .appThemeData
                                 .textTheme
-                                .headline5),
+                                .headlineSmall),
                         Text('\$${state.cart.subtotalString}'),
                       ],
                     ),
@@ -42,7 +42,7 @@ class OrderSummary extends StatelessWidget {
                             style: AppThemeData()
                                 .appThemeData
                                 .textTheme
-                                .headline5),
+                                .headlineSmall),
                         Text('\$${state.cart.deliveryFeeString}'),
                       ],
                     ),
@@ -72,13 +72,13 @@ class OrderSummary extends StatelessWidget {
                               style: AppThemeData()
                                   .appThemeData
                                   .textTheme
-                                  .headline5!
+                                  .headlineSmall!
                                   .copyWith(color: CustomColors.secondary)),
                           Text('\$${state.cart.totalString}',
                               style: AppThemeData()
                                   .appThemeData
                                   .textTheme
-                                  .headline5!
+                                  .headlineSmall!
                                   .copyWith(color: CustomColors.secondary)),
                         ],
                       ),

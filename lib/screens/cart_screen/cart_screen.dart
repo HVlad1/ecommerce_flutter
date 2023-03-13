@@ -45,7 +45,7 @@ class _CartScreenState extends State<CartScreen> {
                               style: AppThemeData()
                                   .appThemeData
                                   .textTheme
-                                  .headline5,
+                                  .headlineSmall,
                             ),
                             ElevatedButton(
                                 onPressed: () {},

@@ -1,17 +1,20 @@
+import 'package:ecommerce_flutter/blocs/wishlist/auth/bloc/auth_bloc.dart';
 import 'package:ecommerce_flutter/components/square_icon.dart';
+import 'package:ecommerce_flutter/screens/login_screen/email_and_password_controller.dart';
+import 'package:ecommerce_flutter/screens/screens.dart';
 import 'package:ecommerce_flutter/spacing.dart';
 import 'package:ecommerce_flutter/validators.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../colors.dart';
-import '../../components/SignUp_button.dart';
+import '../../components/button_login_register.dart';
 import '../../components/logIn_register_divider.dart';
 import '../../components/logIn_register_header.dart';
 import '../../components/text_field.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class RegisterScreen extends StatefulWidget {
-  final Function()? onTap;
-  const RegisterScreen({super.key, required this.onTap});
+  const RegisterScreen({super.key});
 
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
@@ -19,9 +22,6 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
-  final confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -58,20 +58,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 const SizedBox(
                   height: Spacings.heightSizedBoxLogIn10,
                 ),
-                CustomTextField(
-                  controller: confirmPasswordController,
-                  validator: passwordValidator,
-                  labelText: AppLocalizations.of(context)!.confirmPassword,
-                  obscureText: true,
-                ),
                 const SizedBox(
                   height: Spacings.heightSizedBoxLogIn25,
                 ),
-                SignUpButton(
-                  formKey: _formKey,
-                  emailController: emailController,
-                  passwordController: passwordController,
-                  confirmPasswordController: confirmPasswordController,
+                BlocBuilder<AuthBloc, AuthState>(
+                  builder: (context, state) {
+                    return ButtonRegister(
+                      state: state,
+                      name: AppLocalizations.of(context)!.signUp,
+                    );
+                  },
                 ),
                 const SizedBox(
                   height: Spacings.heightSizedBoxLogIn50,
@@ -101,7 +97,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       width: Spacings.widthSizedBoxLogIn5,
                     ),
                     GestureDetector(
-                      onTap: widget.onTap,
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()));
+                      },
                       child: Text(
                         AppLocalizations.of(context)!.loginNow,
                         style: const TextStyle(

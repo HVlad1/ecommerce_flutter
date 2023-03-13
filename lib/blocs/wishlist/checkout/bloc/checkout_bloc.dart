@@ -2,12 +2,12 @@
 
 import 'dart:async';
 
-import 'package:bloc/bloc.dart';
 import 'package:ecommerce_flutter/blocs/wishlist/cart/cart_bloc.dart';
 import 'package:ecommerce_flutter/models/checkout_model.dart';
 import 'package:ecommerce_flutter/repo/checkout/checkout_repository.dart';
 import 'package:equatable/equatable.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../models/cart_model.dart';
 import '../../../../models/product_model.dart';

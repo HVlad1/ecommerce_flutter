@@ -28,5 +28,7 @@ abstract class CustomColors {
   static const selectedItemColor = Color.fromARGB(221, 0, 0, 0);
   static const unselectedItemColor = Color.fromARGB(97, 0, 0, 0);
 
-
+  //Highlight text login/register
+  static const highlightText = Color.fromARGB(255, 68, 138, 255);
+  static const greyText = Color.fromRGBO(158, 158, 158, 1);
 }

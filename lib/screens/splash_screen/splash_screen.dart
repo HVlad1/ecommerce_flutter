@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    Timer(_duration, (() => context.go('/authPage')));
+    Timer(_duration, (() => context.go('/screenController')));
   }
 
   @override

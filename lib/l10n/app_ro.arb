@@ -55,5 +55,11 @@
     "alreadyHaveAccount": "Ai deja un cont?",
     "loginNow": "Autentifica-te acum",
     "signIn": "Logheaza-te",
-    "signUp": "Inregistreaza-te"
+    "signUp": "Inregistreaza-te",
+    "resetPassword": "Resetare Parola",
+    "insertEmail": "Introduceti E-mailul dumneavoastra mai jos \nVa vom trimite un link pentru a va reseta parola",
+    "emailSended": "E-mail trimis",
+    "emailConfirmation": "Un e-mail cu linkul de recuperare a parolei a fost trimis la adresa de e-mail furnizată",
+    "ok": "Ok",
+    "sendText": "Trimite"
 }

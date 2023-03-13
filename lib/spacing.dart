@@ -80,9 +80,21 @@ abstract class Spacings {
   static const widthSizedBoxLogIn5 = 5.0;
 
   static const paddingTextField = EdgeInsets.symmetric(horizontal: 25.0);
-  static const paddingForgotPassword = EdgeInsets.symmetric(horizontal: 25.0);
+  static const paddingForgotPassword = EdgeInsets.only(top: 10.0);
 
   static const paddingContainerSignInButton = EdgeInsets.all(25.0);
   static const marginContainerSignInButton = EdgeInsets.symmetric(horizontal: 25.0);
-  static BorderRadius borderRadiusSignInButton = BorderRadius.circular(10.0);
+  static BorderRadius borderRadiusSignInButton = BorderRadius.circular(12.0);
+  static const paddingAuthErrorLogin = EdgeInsets.only(top: 10.0);
+  static const paddingLogInButton = EdgeInsets.only(top: 25.0);
+  static const widthMaterialButtonLogIn = 250.0;
+  static const heightMaterialButtonLogIn = 50.0;
+  
+  //Reset Password Screen
+  static const heightTopContainerResetPassword = 5.0;
+  static const widthTopContainerResetPassword = 50.0;
+  static const paddingTopContainerResetPassword = EdgeInsets.symmetric(vertical: 5.0);
+  static const generalPaddingResetPassword = EdgeInsets.only(left: 25, top: 25, bottom: 50);
+  static const paddingTextFormFieldResetPassword = EdgeInsets.all(20.0);
 }
+

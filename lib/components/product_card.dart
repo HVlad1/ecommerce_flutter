@@ -56,12 +56,12 @@ class _ProductCardState extends State<ProductCard> {
                                 ? '${widget.product.modelProductDetails.productName.substring(0, 15)}...'
                                 : widget.product.modelProductDetails.productName,
                             style:
-                                AppThemeData().appThemeData.textTheme.bodyText1,
+                                AppThemeData().appThemeData.textTheme.bodyLarge,
                           ),
                           Text(
                             '${widget.product.modelProductDetails.priceString}\$',
                             style:
-                                AppThemeData().appThemeData.textTheme.bodyText1,
+                                AppThemeData().appThemeData.textTheme.bodyLarge,
                           ),
                         ],
                       ),

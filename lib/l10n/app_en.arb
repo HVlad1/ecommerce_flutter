@@ -179,7 +179,7 @@
     "@welcomeBack": {
         "description": "Welcome back text from login"
     },
-    "username" : "Username",
+    "username" : "E-mail",
     "@username": {
         "description": "Username for login textfield"
     },
@@ -215,7 +215,7 @@
     "@alreadyHaveAccount": {
         "description": "Already have an account text"
     },
-    "loginNow" : "Login now",
+    "loginNow" : "Log In",
     "@loginNow": {
         "description": "Login now text"
     },
@@ -226,6 +226,30 @@
     "signUp" : "Sign Up",
     "@signUp": {
         "description": "Sign up text"
+    },
+    "resetPassword" : "Reset Password",
+    "@resetPassword": {
+        "description": "Reset password text"
+    },
+    "insertEmail" : "Insert your E-mail below \nWe gonna send you a link to reset your password",
+    "@insertEmail": {
+        "description": "Insert Email text"
+    },
+    "emailSended" : "E-mail sended",
+    "@emailSended": {
+        "description": "Sended email text"
+    },
+    "emailConfirmation" : "An E-mail with your password recovery link was send to E-mail provided",
+    "@emailConfirmation": {
+        "description": "Sended email text"
+    },
+    "ok" : "Ok",
+    "@ok": {
+        "description": "ok text"
+    },
+    "sendText" : "Send",
+    "@sendText": {
+        "description": "send text"
     }
     
     

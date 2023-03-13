@@ -37,54 +37,54 @@ class AppThemeData {
         scaffoldBackgroundColor: Colors.transparent,
         fontFamily: "SanFrancisco",
         textTheme: TextTheme(
-          headline1: const TextStyle(
+          displayLarge: const TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.w700,
             color: textColorBlack,
             height: 1,
           ),
-          headline2: const TextStyle(
+          displayMedium: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w700,
             color: textColorRed,
             letterSpacing: letterSpacing,
             height: 1,
           ),
-          headline3: const TextStyle(
+          displaySmall: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w600,
             color: textColorBlack,
             letterSpacing: letterSpacing,
             height: 1,
           ),
-          headline4: const TextStyle(
+          headlineMedium: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w700,
             color: textColorWhite,
             letterSpacing: letterSpacing,
             height: 1,
           ),
-          headline5: const TextStyle(
+          headlineSmall: const TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w700,
             color: textColorBlack,
             letterSpacing: letterSpacing,
             height: 1,
           ),
-          headline6: TextStyle(
+          titleLarge: TextStyle(
             fontSize: 12,
             fontWeight: FontWeight.w700,
             color: textColorBlack.withOpacity(0.8),
             letterSpacing: letterSpacing,
             height: 1,
           ),
-          bodyText1: const TextStyle(
+          bodyLarge: const TextStyle(
             fontSize: 16,
             color: textColorWhite,
             fontWeight: FontWeight.w400,
             height: 1,
           ),
-          bodyText2: TextStyle(
+          bodyMedium: TextStyle(
             fontSize: 14,
             color: textColorBlack.withOpacity(0.8),
             fontWeight: FontWeight.w400,

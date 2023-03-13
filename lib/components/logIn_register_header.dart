@@ -37,7 +37,7 @@ class Logo extends StatelessWidget {
             style: AppThemeData()
                 .appThemeData
                 .textTheme
-                .headline3
+                .displaySmall
                 ?.copyWith(color: Colors.grey[700])),
       ],
     );

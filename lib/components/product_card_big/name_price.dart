@@ -30,14 +30,14 @@ class BigCardNameAndPrice extends StatelessWidget {
               style: AppThemeData()
                   .appThemeData
                   .textTheme
-                  .bodyText1,
+                  .bodyLarge,
             ),
             Text(
               '${widget.product.modelProductDetails.priceString}\$',
               style: AppThemeData()
                   .appThemeData
                   .textTheme
-                  .bodyText1,
+                  .bodyLarge,
             ),
           ],
         ),

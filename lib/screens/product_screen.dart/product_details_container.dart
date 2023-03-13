@@ -23,7 +23,7 @@ class ProductDetailsContainer extends StatelessWidget {
       children: [
         Text(
               detailsName,
-              style: AppThemeData().appThemeData.textTheme.headline4,
+              style: AppThemeData().appThemeData.textTheme.headlineMedium,
             ),
             const SizedBox(
               height: 5,

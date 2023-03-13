@@ -45,11 +45,11 @@ class _CartProductCardState extends State<CartProductCard> {
                 children: [
                   Text(
                     widget.product.modelProductDetails.productName,
-                    style: AppThemeData().appThemeData.textTheme.headline5,
+                    style: AppThemeData().appThemeData.textTheme.headlineSmall,
                   ),
                   Text(
                     '${widget.product.modelProductDetails.priceString}\$',
-                    style: AppThemeData().appThemeData.textTheme.bodyText2,
+                    style: AppThemeData().appThemeData.textTheme.bodyMedium,
                   )
                 ],
               ),

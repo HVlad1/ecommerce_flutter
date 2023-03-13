@@ -28,14 +28,14 @@ class ProductPrice extends StatelessWidget {
             padding: Spacings.paddingDetailsPrice,
             child: Text(
               '${product.modelProductDetails.priceString}\$',
-              style: AppThemeData().appThemeData.textTheme.headline2,
+              style: AppThemeData().appThemeData.textTheme.displayMedium,
             ),
           ),
           Column(
             children: [
               Text(AppLocalizations.of(context)!.promoCode,
                   style:
-                      AppThemeData().appThemeData.textTheme.headline3),
+                      AppThemeData().appThemeData.textTheme.displaySmall),
               Container(
                   decoration: BoxDecoration(
                       color: CustomColors.primary,
@@ -46,7 +46,7 @@ class ProductPrice extends StatelessWidget {
                         style: AppThemeData()
                             .appThemeData
                             .textTheme
-                            .bodyText1),
+                            .bodyLarge),
                   )),
             ],
           )

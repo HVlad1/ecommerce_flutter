@@ -1,5 +1,6 @@
 import 'package:ecommerce_flutter/api/product_details_api.dart';
 import 'package:ecommerce_flutter/api/product_image_api.dart';
+import 'package:ecommerce_flutter/blocs/wishlist/auth/bloc/auth_bloc.dart';
 import 'package:ecommerce_flutter/blocs/wishlist/cart/cart_bloc.dart';
 import 'package:ecommerce_flutter/cubit/products_cubit.dart';
 import 'package:ecommerce_flutter/l10n/l10n.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
             ..getProducts(),
         ),
         BlocProvider(create: (_) => WishlistBloc()..add(LoadWishlist())),
+        BlocProvider(create: (context) => AuthBloc()),
         BlocProvider(create: (_) => CartBloc()..add(LoadCartList())),
         BlocProvider(
             create: (context) => CheckoutBloc(

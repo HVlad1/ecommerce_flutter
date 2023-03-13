@@ -82,7 +82,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     children: [
                       Text(
                         AppLocalizations.of(context)!.customerInformation,
-                        style: AppThemeData().appThemeData.textTheme.headline5,
+                        style: AppThemeData().appThemeData.textTheme.headlineSmall,
                       ),
                       _buildTextFormField((value) {
                         context
@@ -100,7 +100,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                           fullNameValidator),
                       Text(
                         AppLocalizations.of(context)!.deliveryInformation,
-                        style: AppThemeData().appThemeData.textTheme.headline5,
+                        style: AppThemeData().appThemeData.textTheme.headlineSmall,
                       ),
                       _buildTextFormField((value) {
                         context
@@ -128,7 +128,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                           zipCodeValidator),
                       Text(
                         AppLocalizations.of(context)!.orderSummary,
-                        style: AppThemeData().appThemeData.textTheme.headline5,
+                        style: AppThemeData().appThemeData.textTheme.headlineSmall,
                       ),
                       const OrderSummary(),
                     ],
