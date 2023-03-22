@@ -1,6 +1,7 @@
 import 'package:ecommerce_flutter/blocs/wishlist/auth/bloc/auth_bloc.dart';
 import 'package:ecommerce_flutter/components/square_icon.dart';
 import 'package:ecommerce_flutter/screens/login_screen/email_and_password_controller.dart';
+import 'package:ecommerce_flutter/screens/register_screen/password_text_field_register.dart';
 import 'package:ecommerce_flutter/screens/screens.dart';
 import 'package:ecommerce_flutter/spacing.dart';
 import 'package:ecommerce_flutter/validators.dart';
@@ -49,12 +50,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 const SizedBox(
                   height: Spacings.heightSizedBoxLogIn10,
                 ),
-                CustomTextField(
-                  controller: passwordController,
-                  validator: passwordValidator,
-                  labelText: AppLocalizations.of(context)!.password,
-                  obscureText: true,
-                ),
+               const PasswordTextFieldRegister(),
                 const SizedBox(
                   height: Spacings.heightSizedBoxLogIn10,
                 ),

@@ -1,7 +1,7 @@
 import 'package:ecommerce_flutter/blocs/wishlist/auth/bloc/auth_bloc.dart';
 import 'package:ecommerce_flutter/screens/login_screen/email_form_field.dart';
 import 'package:ecommerce_flutter/screens/login_screen/forgot_password.dart';
-import 'package:ecommerce_flutter/screens/login_screen/password_text_field.dart';
+import 'package:ecommerce_flutter/screens/login_screen/password_text_field_login.dart';
 import 'package:ecommerce_flutter/screens/screens.dart';
 import 'package:ecommerce_flutter/spacing.dart';
 import 'package:flutter/material.dart';
@@ -44,9 +44,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(
                     height: Spacings.heightSizedBoxLogIn10,
                   ),
-                  const PasswordTextField(),
-                    ErrorText(),
-                  ForgotPasswordAndRegisterNow(state: state,)
+                  const PasswordTextFieldLogin(),
+                  ErrorText(),
+                  ForgotPasswordAndRegisterNow(
+                    state: state,
+                  )
                 ],
               ),
             )),
@@ -58,10 +60,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
-
-
-
-
-
-
