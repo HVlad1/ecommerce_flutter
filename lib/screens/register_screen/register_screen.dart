@@ -1,5 +1,4 @@
 import 'package:ecommerce_flutter/blocs/wishlist/auth/bloc/auth_bloc.dart';
-import 'package:ecommerce_flutter/components/square_icon.dart';
 import 'package:ecommerce_flutter/screens/login_screen/email_and_password_controller.dart';
 import 'package:ecommerce_flutter/screens/register_screen/password_text_field_register.dart';
 import 'package:ecommerce_flutter/screens/screens.dart';
@@ -9,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../colors.dart';
 import '../../components/button_login_register.dart';
-import '../../components/logIn_register_divider.dart';
 import '../../components/logIn_register_header.dart';
 import '../../components/text_field.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -50,7 +48,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 const SizedBox(
                   height: Spacings.heightSizedBoxLogIn10,
                 ),
-               const PasswordTextFieldRegister(),
+                const PasswordTextFieldRegister(),
                 const SizedBox(
                   height: Spacings.heightSizedBoxLogIn10,
                 ),
@@ -64,23 +62,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       name: AppLocalizations.of(context)!.signUp,
                     );
                   },
-                ),
-                const SizedBox(
-                  height: Spacings.heightSizedBoxLogIn50,
-                ),
-                const DividerRow(),
-                const SizedBox(
-                  height: Spacings.heightSizedBoxLogIn25,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    SquareIcon(icon: Icons.facebook),
-                    SizedBox(
-                      width: Spacings.widthSizedBoxLogIn25,
-                    ),
-                    SquareIcon(icon: Icons.apple)
-                  ],
                 ),
                 const SizedBox(
                   height: Spacings.heightSizedBoxLogIn50,
