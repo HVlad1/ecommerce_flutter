@@ -61,5 +61,12 @@
     "emailSended": "E-mail trimis",
     "emailConfirmation": "Un e-mail cu linkul de recuperare a parolei a fost trimis la adresa de e-mail furnizată",
     "ok": "Ok",
-    "sendText": "Trimite"
+    "sendText": "Trimite",
+    "myProfile": "Profilul meu",
+    "myOrders": "Comenzile mele",
+    "shoppyHelp": "Shoppy Help",
+    "logOut": "Delogheaza-te",
+    "text1Help": "Cum pot beneficia de retur gratis",
+    "text2Help": "Nu am primit factura, ce fac?",
+    "text3Help": "Am primit un produs defect, ce fac?"
 }

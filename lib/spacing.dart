@@ -96,5 +96,15 @@ abstract class Spacings {
   static const paddingTopContainerResetPassword = EdgeInsets.symmetric(vertical: 5.0);
   static const generalPaddingResetPassword = EdgeInsets.only(left: 25, top: 25, bottom: 50);
   static const paddingTextFormFieldResetPassword = EdgeInsets.all(20.0);
+
+  //Profile Screen
+  static const heightSizedBoxHeader = 20.0;
+  static const paddingProfileMenuContainer = EdgeInsets.symmetric(horizontal: 20, vertical: 10);
+  static const borderProfileMenuContainer = BorderRadius.all(Radius.circular(20.0));
+  static const paddingProfileMenuContainerContent = EdgeInsets.all(20.0);
+  static BorderRadius borderRadiusExpansionTileHelp = BorderRadius.circular(20.0);
+  static const paddingExpansionTileHelp = EdgeInsets.all(8.0);
+  static BorderRadius borderRadiusModalHelp = BorderRadius.circular(20.0);
+  static const paddingContentModal = EdgeInsets.all(14.0);
 }
 

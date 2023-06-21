@@ -250,8 +250,34 @@
     "sendText" : "Send",
     "@sendText": {
         "description": "send text"
+    },
+    "myProfile" : "My Profile",
+    "@myProfile": {
+        "description": "My profile text from profile screen"
+    },
+    "myOrders" : "My Orders",
+    "@myOrders": {
+        "description": "My orders text from profile screen"
+    },
+    "shoppyHelp" : "Shoppy Help",
+    "@shoppyHelp": {
+        "description": "Shoppy text from profile screen"
+    },
+    "logOut" : "Log Out",
+    "@logOut": {
+        "description": "Log Out text from profile screen"
+    },
+    "text1Help" : "How can I benefit from free returns?",
+    "@text1Help": {
+        "description": "Text from modal help"
+    },
+    "text2Help" : "I did not receive the invoice, what do I do?",
+    "@text2Help": {
+        "description": "Text from modal help"
+    },
+    "text3Help" : "I received a defective product, what should I do?",
+    "@text3Help": {
+        "description": "Text from modal help"
     }
-    
-    
     
 }

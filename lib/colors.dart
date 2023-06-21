@@ -31,4 +31,7 @@ abstract class CustomColors {
   //Highlight text login/register
   static const highlightText = Color.fromARGB(255, 68, 138, 255);
   static const greyText = Color.fromRGBO(158, 158, 158, 1);
+
+  //Background Container Profile Menu
+  static const backgroundContainerProfileMenu = Color(0xFFF5F6F9);
 }
