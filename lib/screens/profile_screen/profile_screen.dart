@@ -1,5 +1,6 @@
 import 'package:ecommerce_flutter/blocs/wishlist/auth/bloc/auth_bloc.dart';
 import 'package:ecommerce_flutter/colors.dart';
+import 'package:ecommerce_flutter/screens/profile_screen/profile_details.dart';
 import 'package:ecommerce_flutter/screens/profile_screen/profile_menu.dart';
 import 'package:ecommerce_flutter/screens/profile_screen/profile_menu_help.dart';
 import 'package:ecommerce_flutter/screens/profile_screen/profile_order_screen.dart';
@@ -27,7 +28,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ProfileMenu(
             title: AppLocalizations.of(context)!.myProfile,
             icon: Icons.person,
-            press: () {},
+            press: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProfileDetails()));
+            },
           ),
           ProfileMenu(
             title: AppLocalizations.of(context)!.myOrders,

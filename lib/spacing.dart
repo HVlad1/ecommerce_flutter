@@ -106,5 +106,6 @@ abstract class Spacings {
   static const paddingExpansionTileHelp = EdgeInsets.all(8.0);
   static BorderRadius borderRadiusModalHelp = BorderRadius.circular(20.0);
   static const paddingContentModal = EdgeInsets.all(14.0);
+  static const heightSizedBox5 = 5.0;
 }
 

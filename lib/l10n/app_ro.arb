@@ -68,5 +68,6 @@
     "logOut": "Delogheaza-te",
     "text1Help": "Cum pot beneficia de retur gratis",
     "text2Help": "Nu am primit factura, ce fac?",
-    "text3Help": "Am primit un produs defect, ce fac?"
+    "text3Help": "Am primit un produs defect, ce fac?",
+    "customerSince": "Client din"
 }

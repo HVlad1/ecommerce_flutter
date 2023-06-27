@@ -278,6 +278,10 @@
     "text3Help" : "I received a defective product, what should I do?",
     "@text3Help": {
         "description": "Text from modal help"
+    },
+    "customerSince" : "Customer since",
+    "@customerSince": {
+        "description": "Text from my profile details, customer sincer"
     }
     
 }
